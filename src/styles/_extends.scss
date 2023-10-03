@@ -9,3 +9,183 @@
   border-top-right-radius: calc(.25rem - 1px);
   border-bottom-right-radius: calc(.25rem - 1px);
 }
+
+.table-last-movements {
+  tr {
+    th,
+    td {
+      padding: 0;
+      font-size: small;
+      font-family: 'Mada-Light' !important;
+      color: #e1e2e5 !important;
+      border-bottom: 0.001rem solid #e1e2e5 !important;
+    }
+    
+    &:last-child {
+      th,
+      td {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+.dark-bill-card {
+  background-color: #171d2b;
+  border-radius: 0.3rem;
+  .card-body {
+    padding:  0.25rem !important;
+  }
+
+  .card-footer {
+    padding: 0px !important;
+    background-color: #171d2b;
+    p {
+      color: #e1e2e5;
+      font-family: 'Mada-Light';
+    }
+
+  }
+}
+
+.myWallet {
+  .card {
+    border: none !important;
+    border-radius: 10px !important;
+  }
+  .card-header {
+    text-transform: none; // Evita que el texto esté en mayúsculas
+    border: none !important;
+  }
+
+  .table {
+    thead th,td {
+      font-size: small;
+      font-family: 'Mada-Light';
+      font-weight: lighter;
+      
+    }
+
+    tbody tr{
+      background-color: transparent !important;
+    }
+
+    tbody td {
+      font-family: 'Mada-Regular' !important; 
+      border-bottom: 0.001rem solid #d1d2d5 !important;
+      padding-bottom: 0.4rem !important;
+      color: #222b40 !important;
+      font-weight: 600 !important;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none !important; /* Elimina el borde inferior de la última fila */
+    }
+  }
+}
+
+.carousel-customer-img {
+  width: 2.7rem !important;
+  height: 2.5rem !important;
+}
+
+.custom-carousel-customers {
+  
+  .ul-list-carousel-customer {
+    li {
+      margin-bottom: -0.5rem !important;
+     
+    }
+  }
+  
+  ul.control-dots li.dot  {
+    display: none !important;
+  }
+
+  .card-footer{
+    border-top:none !important;
+  }
+
+}
+
+button.bg-gradient-primary-right {
+  background: linear-gradient(to right, #b119dc, #f3817c);
+}
+
+.btn-outline-secondary {
+  color: #00000099 !important;
+  background-color: white !important;
+}
+
+.img-radios-15 {
+  border-radius: 15px !important;
+}
+
+.bl-1 {
+  border-color: #ced0d4d4 !important;
+  border-left: solid 0.1rem;
+  height: 30% !important;
+}
+
+img.img-investment-galery-p{
+  width: 100% !important;
+  height: 80% !important;
+  border-radius: 10px;
+}
+
+img.img-investment-galery-s{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 25%;
+  height: 20%;
+}
+
+
+
+
+table tr.disabled td {
+           
+  background-color: #f0f0f0 !important; // Fondo gris claro para las filas con la clase 'disabled'
+
+}
+
+.porfolio-container {
+  .card-header {
+    border: none !important;
+
+    h4 {
+      font-family: 'Mada-Regular';
+      text-transform: none !important;
+    }
+  }
+}
+
+.table-portfolio {
+  table {
+    width: 100%;
+    border-collapse: collapse; 
+    thead {
+      tr {
+        td,th {
+          border-bottom: 1px solid #dedede; 
+          border-top: 0px !important;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:not(:last-child) {
+          td, th {
+            border-bottom: 1px solid #dedede; // Borde inferior para todas las filas excepto la última
+          }
+        }
+       
+      }
+
+     
+    }
+
+    
+  }
+}

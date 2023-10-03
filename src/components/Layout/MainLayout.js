@@ -9,6 +9,15 @@ import NotificationSystem from 'react-notification-system';
 import { NOTIFICATION_SYSTEM_STYLE } from 'utils/constants';
 
 class MainLayout extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      pageTitle: 'Panel de control',
+    };
+  }
+
+
   static isSidebarOpen() {
     return document
       .querySelector('.cr-sidebar')
@@ -24,30 +33,30 @@ class MainLayout extends React.Component {
   componentDidMount() {
     this.checkBreakpoint(this.props.breakpoint);
 
-    setTimeout(() => {
-      if (!this.notificationSystem) {
-        return;
-      }
+    // setTimeout(() => {
+    //   if (!this.notificationSystem) {
+    //     return;
+    //   }
 
-      this.notificationSystem.addNotification({
-        title: <MdImportantDevices />,
-        message: 'Welome to Reduction Admin!',
-        level: 'info',
-      });
-    }, 1500);
+    //   this.notificationSystem.addNotification({
+    //     title: <MdImportantDevices />,
+    //     message: 'Welome to Reduction Admin!',
+    //     level: 'info',
+    //   });
+    // }, 1500);
 
-    setTimeout(() => {
-      if (!this.notificationSystem) {
-        return;
-      }
+    // setTimeout(() => {
+    //   if (!this.notificationSystem) {
+    //     return;
+    //   }
 
-      this.notificationSystem.addNotification({
-        title: <MdLoyalty />,
-        message:
-          'Reduction is carefully designed template powered by React and Bootstrap4!',
-        level: 'info',
-      });
-    }, 2500);
+    //   this.notificationSystem.addNotification({
+    //     title: <MdLoyalty />,
+    //     message:
+    //       'Reduction is carefully designed template powered by React and Bootstrap4!',
+    //     level: 'info',
+    //   });
+    // }, 2500);
   }
 
   // close sidebar when
@@ -62,6 +71,13 @@ class MainLayout extends React.Component {
       this.openSidebar('close');
     }
   };
+
+  changePageTitle = (newPageTitle) => {
+   
+    this.setState({
+        pageTitle : newPageTitle
+    });
+  }
 
   checkBreakpoint(breakpoint) {
     switch (breakpoint) {
@@ -90,9 +106,10 @@ class MainLayout extends React.Component {
     const { children } = this.props;
     return (
       <main className="cr-app bg-light">
-        <Sidebar />
+        
+        <Sidebar changePageTitle={this.changePageTitle} />
         <Content fluid onClick={this.handleContentClick}>
-          <Header />
+          <Header PageTitle={this.state.pageTitle} />
           {children}
           <Footer />
         </Content>

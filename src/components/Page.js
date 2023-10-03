@@ -22,14 +22,14 @@ const Page = ({
   return (
     <Tag className={classes} {...restProps}>
       <div className={bem.e('header')}>
-        {title && typeof title === 'string' ? (
+        {/* {title && typeof title === 'string' ? (
           <Typography type="h1" className={bem.e('title')}>
             {title}
           </Typography>
         ) : (
             title
-          )}
-        {breadcrumbs && (
+          )} */}
+        {/* {breadcrumbs && (
           <Breadcrumb className={bem.e('breadcrumb')}>
             <BreadcrumbItem>Home</BreadcrumbItem>
             {breadcrumbs.length &&
@@ -39,7 +39,7 @@ const Page = ({
                 </BreadcrumbItem>
               ))}
           </Breadcrumb>
-        )}
+        )} */}
       </div>
       {children}
     </Tag>

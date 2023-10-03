@@ -24,6 +24,10 @@ const ProgressPage = React.lazy(() => import('pages/ProgressPage'));
 const TablePage = React.lazy(() => import('pages/TablePage'));
 const TypographyPage = React.lazy(() => import('pages/TypographyPage'));
 const WidgetPage = React.lazy(() => import('pages/WidgetPage'));
+const WalletPage = React.lazy(() => import('pages/WalletPage'));
+const InvestmentsPage = React.lazy(() => import('pages/InvestmentsPage'));
+const PortfolioPage = React.lazy(() => import('pages/PortfolioPage'));
+const PortfolioDetailPage = React.lazy(() => import('pages/PortfolioDetailPage'));
 
 const getBasename = () => {
   return `/${process.env.PUBLIC_URL.split('/').pop()}`;
@@ -32,6 +36,7 @@ const getBasename = () => {
 class App extends React.Component {
   render() {
     return (
+      <>
       <BrowserRouter basename={getBasename()}>
         <GAListener>
           <Switch>
@@ -55,6 +60,10 @@ class App extends React.Component {
             <MainLayout breakpoint={this.props.breakpoint}>
               <React.Suspense fallback={<PageSpinner />}>
                 <Route exact path="/" component={DashboardPage} />
+                <Route exact path="/wallet" component={WalletPage} />
+                <Route exact path="/investments" component={InvestmentsPage} />
+                <Route exact path="/portfolio" component={PortfolioPage} />
+                <Route exact path="/portfoliodetail/:pid" component={PortfolioDetailPage} />
                 <Route exact path="/login-modal" component={AuthModalPage} />
                 <Route exact path="/buttons" component={ButtonPage} />
                 <Route exact path="/cards" component={CardPage} />
@@ -80,6 +89,7 @@ class App extends React.Component {
           </Switch>
         </GAListener>
       </BrowserRouter>
+      </>
     );
   }
 }

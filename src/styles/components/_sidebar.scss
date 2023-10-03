@@ -39,8 +39,8 @@
   &::after {
     z-index: 3;
     // sublime light
-    background: #fc5c7d; /* fallback for old browsers */
-    background: linear-gradient(to bottom, #6a82fb, #fc5c7d);
+    background: #801db5; /* fallback for old browsers */
+    // background: linear-gradient(to bottom, #6a82fb, #fc5c7d);
     opacity: 1;
   }
 
@@ -102,7 +102,7 @@
   }
 
   .nav {
-    margin-top: 20px;
+    margin-top: 0px;
 
     .nav-item {
       margin: 5px 10px;
@@ -118,10 +118,14 @@
       color: theme-color(light);
 
       &:hover {
-        background: rgba(theme-color(light), 0.15);
+        font-weight: bold;
       }
     }
   }
+}
+
+.bg-c-gray {
+  background-color: #e9e8e8;
 }
 
 // @include gradient-y(#02aab0, #00cdac); // green beach

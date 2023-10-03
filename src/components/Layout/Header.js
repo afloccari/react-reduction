@@ -77,15 +77,18 @@ class Header extends React.Component {
 
   render() {
     const { isNotificationConfirmed } = this.state;
-
+    
     return (
-      <Navbar light expand className={bem.b('bg-white')}>
+      <Navbar light expand className={bem.b('bg-c-gray ')}>
         <Nav navbar className="mr-2">
-          <Button outline onClick={this.handleSidebarControlButton}>
+          <Button style={{display:'none'}} outline onClick={this.handleSidebarControlButton}>
             <MdClearAll size={25} />
           </Button>
+          <h4 className='ml-2 cr-header-title '>{this.props.PageTitle + ' | '} 
+            <span className='text-primary'>Inversor Grow</span>
+          </h4>
         </Nav>
-        <Nav navbar>
+        <Nav navbar className={bem.e('nav-right')}>
           <SearchInput />
         </Nav>
 

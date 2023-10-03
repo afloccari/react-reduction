@@ -1,6 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
 // @import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
 
+$font-path-mada: '../assets/fonts/static/';
+
+@font-face {
+  font-family: 'Mada-Regular';
+  src: url('#{$font-path-mada}Mada-Regular.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mada-Light';
+  src: url('#{$font-path-mada}Mada-Light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mada-Medium';
+  src: url('#{$font-path-mada}Mada-Medium.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mada-Bold';
+  src: url('#{$font-path-mada}Mada-Bold.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Font Smoothing */
 body,
 h1,
@@ -10,6 +40,7 @@ h4,
 h5,
 h6,
 p,
+small,
 a,
 td,
 button,
@@ -28,7 +59,7 @@ button,
 .alert {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Poppins, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Mada-Regular',Poppins, Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: $font-weight-normal;
 }
 
@@ -39,4 +70,43 @@ button,
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+}
+
+.cr-page {
+  background-color: f0f1f6;
+}
+
+.cr-bg-secondary {
+  background-color: #222b40;
+}
+
+.text-primary {
+  color: #801db5 !important;
+}
+
+.text-secondary {
+  color: #222b40 !important;
+}
+
+.text-gray{
+  color: #e1e2e5 !important;
+}
+
+.text-salmon {
+  color: #f3817c !important;
+}
+
+.vertical-line {
+  border-left: 1px solid white; /* Cambiar el color a blanco */
+  height: 100px; /* Altura de la línea vertical */
+  margin: 0 10px; /* Márgenes opcionales para ajustar la posición */
+}
+
+.text-outline-success {
+  color: transparent !important; 
+  text-shadow: 0 0 5px #28a745 !important ; 
+}
+
+.bg-cr-foreground{
+    background-color: #f4f4f4 !important;
 }
