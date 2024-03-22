@@ -62,8 +62,12 @@ class App extends React.Component {
                 <Route exact path="/" component={DashboardPage} />
                 <Route exact path="/wallet" component={WalletPage} />
                 <Route exact path="/investments" component={InvestmentsPage} />
-                <Route exact path="/portfolio" component={PortfolioPage} />
-                <Route exact path="/portfoliodetail/:pid" component={PortfolioDetailPage} />
+                <Route exact path="/portfolio" component={props => (
+                  <PortfolioPage {...props}  />
+                )} />
+                <Route exact path="/portfoliodetail/:pid"  component={props => (
+                  <PortfolioDetailPage {...props} />
+                )} />
                 <Route exact path="/login-modal" component={AuthModalPage} />
                 <Route exact path="/buttons" component={ButtonPage} />
                 <Route exact path="/cards" component={CardPage} />

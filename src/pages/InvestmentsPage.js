@@ -214,6 +214,7 @@ const InvestmentsPage = () => {
                     </Card>
                 </Col>
             </Row>
+            
             <Row className='px-5'>
                 <h6 className='text-primary'><b>Inversiones similares</b></h6>
                 <Col md={12}>
